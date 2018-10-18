@@ -39,6 +39,36 @@
 ##
 def main():
     print("questao 2")
+    from math import sqrt
+    a = input().upper()
+    c = 0
+    b = 0
+    d = 0
+    e = 0
+    while a:
+        direcao = a[:a.find(' ')]
+        p = a[a.find(' ')+1:]
+        passos = int(p)
+        if direcao == 'CIMA':
+            c = c + passos 
+        if direcao == 'BAIXO':
+            b = b + passos
+        if direcao == 'ESQUERDA':
+            e = e + passos
+        if direcao == 'DIREITA':
+            d = d + passos
+        if c > b:
+            X = c - b
+        else:
+            X = b - c
+        if e > d:
+            Y = e - d
+        else:
+            Y = d - e
+        H = sqrt((Y*Y)+(X*X))
+        a = input().upper()
+    print(int(H))
+
 
 
     
